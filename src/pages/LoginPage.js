@@ -13,7 +13,7 @@ const LoginPage = () => (
                  <label>Password : </label>   
                  <input type="password" placeholder="Enter Password" name="password" required />  
                  <button type="submit" >Login</button> 
-                 <a href="/"><input type="submit" value="fastLogin"></input></a>  
+                 <a href="/projectBoard"><input type="submit" value="fastLogin"></input></a>  
                  <a href="/register"><input type="submit" value="register"></input></a>    
             </div>
                

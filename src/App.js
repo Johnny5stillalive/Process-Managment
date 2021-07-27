@@ -16,8 +16,9 @@ class App extends Component{
       <Router>
         <div className="App">
           <div id="page-body">
-            <Route path="/" component={ProjectBoard} exact/>
+            <Route path="/" component={LoginPage} exact/>
             <Route path="/login-page" component={LoginPage} exact/>
+            <Route path="/projectBoard" component={ProjectBoard} exact/>
             <Route path="/workspaces" component={Workspaces} exact/>
             <Route path="/register" component={Register} exact/>
           </div>
