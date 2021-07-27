@@ -2,13 +2,14 @@ import './App.css';
 import { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Route
+  Route, Switch,
 } from 'react-router-dom';
 
 import ProjectBoard from './pages/ProjectBoard';
 import LoginPage from './pages/LoginPage';
 import Workspaces from './pages/Workspaces';
 import Register from './pages/Register'
+import NotFoundPage from './pages/NotFoundPage'
 
 class App extends Component{
   render(){
@@ -16,11 +17,14 @@ class App extends Component{
       <Router>
         <div className="App">
           <div id="page-body">
-            <Route path="/" component={LoginPage} exact/>
-            <Route path="/login-page" component={LoginPage} exact/>
-            <Route path="/projectBoard" component={ProjectBoard} exact/>
-            <Route path="/workspaces" component={Workspaces} exact/>
-            <Route path="/register" component={Register} exact/>
+            <Switch>
+              <Route path="/" component={LoginPage} exact/>
+              <Route path="/login-page" component={LoginPage} exact/>
+              <Route path="/projectBoard" component={ProjectBoard} exact/>
+              <Route path="/workspaces" component={Workspaces} exact/>
+              <Route path="/register" component={Register} exact/>
+              <Route component={NotFoundPage} />
+            </Switch>
           </div>
         </div>
       </Router>
