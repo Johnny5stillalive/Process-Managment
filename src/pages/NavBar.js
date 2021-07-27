@@ -16,7 +16,10 @@ const NavBar = () => (
                <Link to="/Workspaces"> Workspaces </Link>
             </li>
             <li>
-            <Link to="/login-page">logout</Link>
+               <Link to="/InviteForm"> Invite </Link>
+            </li>
+            <li>
+                <Link to="/login-page">logout</Link>
             </li>
         </ul>
     </nav>

@@ -10,6 +10,7 @@ import LoginPage from './pages/LoginPage';
 import Workspaces from './pages/Workspaces';
 import Register from './pages/Register'
 import NotFoundPage from './pages/NotFoundPage'
+import InviteForm from './pages/InviteForrm';
 
 class App extends Component{
   render(){
@@ -23,6 +24,7 @@ class App extends Component{
               <Route path="/projectBoard" component={ProjectBoard} exact/>
               <Route path="/workspaces" component={Workspaces} exact/>
               <Route path="/register" component={Register} exact/>
+              <Route path="/InviteForm" component={InviteForm} exact/>
               <Route component={NotFoundPage} />
             </Switch>
           </div>
