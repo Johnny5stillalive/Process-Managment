@@ -27,13 +27,12 @@ const TaskList = styled.div`
 `;
 
 const Button = styled.button`
-    height:25%;
+    height:30%;
     width:10%;
     font-size:60%;
     background-color: Black;
     color: white;
     border-radius: 5px;
-    margin: 10px 0px;
     cursor: pointer;
     box-shadow: 0px 2px 2px lightgray;
     transition: ease background-color 250ms;
@@ -47,11 +46,10 @@ const Button = styled.button`
     `;
 
     const AddTaskButton = styled(Button)`
-    position:relative;
-    height:45%;
-    width:40%;
-    font-size:70%;
     
+    height:5%;
+    width:100%;
+    font-size:70%;
     `
 
 
@@ -64,11 +62,9 @@ function Column(props) {
                     {...provided.draggableProps}>
                     <wrapper>
                     <Title {...provided.dragHandleProps}>{props.column.title}</Title>
-                    
-                    <AddTaskButton onClick={addTask}>Add Task</AddTaskButton>
                     <Button onClick={removeColumn}>x</Button>
                     </wrapper>
-                    
+                    <AddTaskButton onClick={addTask}>Add Task</AddTaskButton>
                     <Droppable droppableId={props.column.id} type='task'>
                         {(provided, snapshot) => (
                             <TaskList
