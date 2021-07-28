@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from './NavBar'
-import { Link, link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 const Workspaces = () => (
     <>

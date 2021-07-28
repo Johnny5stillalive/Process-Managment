@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Task from './Task.js'
 import { Droppable, Draggable } from 'react-beautiful-dnd'
 
+
 const Container = styled.div`
     margin: 8px;
     border: 1px solid lightgrey;
@@ -24,6 +25,28 @@ const TaskList = styled.div`
     min-height:100px;
 `;
 
+const Button = styled.button`
+    height:25%;
+    width:10%;
+    font-size:60%;
+    background-color: Black;
+    color: white;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px lightgray;
+    transition: ease background-color 250ms;
+    transition: ease color 250ms;
+    &:hover {
+        cursor: default;
+        color:black;
+        background-color:white;
+        opacity: 0.7;  
+    }
+    `;
+
+
+
 function Column(props) {
     return (
         <Draggable draggableId={props.column.id} index={props.index}>
@@ -33,7 +56,7 @@ function Column(props) {
                     {...provided.draggableProps}>
                     <wrapper>
                     <Title {...provided.dragHandleProps}>{props.column.title}</Title>
-                    <button>X</button>
+                    <Button onClick={removeColumn}>x</Button>
                     </wrapper>
                     
                     <Droppable droppableId={props.column.id} type='task'>
@@ -53,6 +76,10 @@ function Column(props) {
             )}
         </Draggable>
     )
+}
+
+const removeColumn = () => {
+    console.log("column removed jk!!")
 }
 
 export default Column
