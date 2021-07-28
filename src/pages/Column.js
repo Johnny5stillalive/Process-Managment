@@ -16,6 +16,7 @@ const Container = styled.div`
 `;
 const Title = styled.h3`
     display:inline-block;
+    tex
     padding: 8px;
     
 `;
@@ -45,6 +46,13 @@ const Button = styled.button`
     }
     `;
 
+    const AddTaskButton = styled(Button)`
+    position:relative;
+    height:45%;
+    width:40%;
+    font-size:70%;
+    
+    `
 
 
 function Column(props) {
@@ -56,6 +64,8 @@ function Column(props) {
                     {...provided.draggableProps}>
                     <wrapper>
                     <Title {...provided.dragHandleProps}>{props.column.title}</Title>
+                    
+                    <AddTaskButton onClick={addTask}>Add Task</AddTaskButton>
                     <Button onClick={removeColumn}>x</Button>
                     </wrapper>
                     
@@ -79,7 +89,14 @@ function Column(props) {
 }
 
 const removeColumn = () => {
-    console.log("column removed jk!!")
+    //TODO make function remove current column
+    //Should there be a notification if there is tasks remaining in column?
+    console.log("column removed jk!!");
+}
+
+const addTask = () => {
+    //TODO make function add a task to column
+    console.log("You have added a task");
 }
 
 export default Column
