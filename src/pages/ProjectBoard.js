@@ -10,6 +10,27 @@ const Container = styled.div`
     display : flex;
 `
 
+const Button = styled.button`
+    
+    height:30%;
+    width:7%;
+    font-size:60%;
+    background-color: Black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px lightgray;
+    transition: ease background-color 250ms;
+    transition: ease color 250ms;
+    &:hover {
+        cursor: default;
+        color:black;
+        background-color:white;
+        opacity: 0.7;  
+    }
+    `;
+
+
 const ProjectBoard = () => {
   const [data, setData] = useState(dataset)
 
@@ -84,13 +105,16 @@ const ProjectBoard = () => {
         }
 
         setData(newState)
-
-
   }
 
+  const addColumn = () => {
+   console.log("You have added a Column")
+  }
+  
   return (
     <>
     <NavBar />
+    <Button onClick={addColumn}>Add Column</Button>
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable droppableId='all-columns' direction='horizontal' type='column'>
         {(provided) => (
@@ -109,5 +133,7 @@ const ProjectBoard = () => {
     </>
   )
 }
+
+
 
 export default ProjectBoard;

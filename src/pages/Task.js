@@ -2,7 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Draggable } from 'react-beautiful-dnd'
-import TaskContent from './TaskContent'
+
 
 const Container = styled.div`
     border: 1px solid lightgrey;
@@ -26,7 +26,7 @@ function Task(props) {
                     ref={provided.innerRef}
                     isDragging={snapshot.isDragging}
                 >
-                    <TaskContent />                    
+                                     
                     {props.task.content}   
                 </Container>
             )}
