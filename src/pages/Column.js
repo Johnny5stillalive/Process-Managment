@@ -1,8 +1,9 @@
 
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import Task from './Task.js'
 import { Droppable, Draggable } from 'react-beautiful-dnd'
+import Popup from './Popup';
 
 
 const Container = styled.div`
@@ -54,15 +55,36 @@ const Button = styled.button`
     font-size:70%;
     `
 
+   
 
 function Column(props) {
+    const [isOpen, setIsOpen] = useState(false);
+
+
+    const removeColumn = () => {
+        //TODO make function remove current column
+        //Should there be a notification if there is tasks remaining in column?
+        console.log("column removed jk!!");
+    }
+    
+    const addTask = () => {
+        //TODO make function add a task to column
+        setIsOpen(!isOpen);
+        console.log("You have added a task");
+    }
+
+
     return (
         <Draggable draggableId={props.column.id} index={props.index}>
+          
             {(provided) => (
                 <Container
                     ref={provided.innerRef}
                     {...provided.draggableProps}>
                     <wrapper>
+                    {isOpen && <Popup 
+                    handleClose={addTask}
+                     />}
                     <Title {...provided.dragHandleProps}>{props.column.title}</Title>
                     <Button onClick={removeColumn}>x</Button>
                     <AddTaskButton onClick={addTask}>Add Task</AddTaskButton>
@@ -87,15 +109,6 @@ function Column(props) {
     )
 }
 
-const removeColumn = () => {
-    //TODO make function remove current column
-    //Should there be a notification if there is tasks remaining in column?
-    console.log("column removed jk!!");
-}
 
-const addTask = () => {
-    //TODO make function add a task to column
-    console.log("You have added a task");
-}
 
 export default Column

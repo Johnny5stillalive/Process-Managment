@@ -26,7 +26,7 @@ function Task(props) {
                     ref={provided.innerRef}
                     isDragging={snapshot.isDragging}
                 >
-                                     
+                     <div><h3>{props.task.title}</h3></div>                
                     {props.task.content}   
                 </Container>
             )}

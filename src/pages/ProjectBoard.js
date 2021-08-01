@@ -5,6 +5,7 @@ import dataset from './dataset'
 import Column from './Column'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 import NavBar from './NavBar'
+import Popup from './Popup';
 
 const Container = styled.div`
     display : flex;
@@ -32,7 +33,9 @@ const Button = styled.button`
 
 
 const ProjectBoard = () => {
+  
   const [data, setData] = useState(dataset)
+  const [isOpen, setIsOpen] = useState(false);
 
   const onDragEnd = result => {
 
@@ -108,12 +111,17 @@ const ProjectBoard = () => {
   }
 
   const addColumn = () => {
+    setIsOpen(!isOpen);
    console.log("You have added a Column")
   }
   
   return (
     <>
     <NavBar />
+    {isOpen && <Popup 
+      handleClose={addColumn}
+    />}
+ 
     <Button onClick={addColumn}>Add Column</Button>
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable droppableId='all-columns' direction='horizontal' type='column'>
