@@ -20,7 +20,7 @@ function Task(props) {
             {(provided, snapshot) => (
 
                 //this is the contaianer for the task 
-                <Container
+                <Container 
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}

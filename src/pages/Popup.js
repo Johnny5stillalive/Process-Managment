@@ -18,11 +18,11 @@ const Popup = props => {
         <span className="close-icon" onClick={props.handleClose}>x</span>
                 <Container >   
                     <label>Title : </label>   
-                    <input type="text" placeholder="Enter Username" name="username" required />  
+                    <input type="text" placeholder="Enter Title" name="Title" required />  
                </Container>
                 <Container>
                     <label>Content : </label>   
-                    <input type="password" placeholder="Enter Password" name="password" required />  
+                    <input type="text" placeholder="" name="content" required />  
                 </Container>
                 <Container>
                     <button type="submit" onClick={props.handleClose}>Create</button> 

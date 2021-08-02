@@ -81,14 +81,16 @@ function Column(props) {
                 <Container
                     ref={provided.innerRef}
                     {...provided.draggableProps}>
-                    <wrapper>
+                    <div>
                     {isOpen && <Popup 
                     handleClose={addTask}
                      />}
+                     
                     <Title {...provided.dragHandleProps}>{props.column.title}</Title>
                     <Button onClick={removeColumn}>x</Button>
                     <AddTaskButton onClick={addTask}>Add Task</AddTaskButton>
-                    </wrapper>
+                    
+                    </div>
                     
                     <Droppable droppableId={props.column.id} type='task'>
                         {(provided, snapshot) => (
