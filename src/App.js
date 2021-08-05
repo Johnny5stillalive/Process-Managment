@@ -12,6 +12,7 @@ import Register from './pages/Register'
 import NotFoundPage from './pages/NotFoundPage'
 import InviteForm from './pages/InviteForrm';
 
+
 class App extends Component{
   render(){
     return (
@@ -21,7 +22,7 @@ class App extends Component{
             <Switch>
               <Route path="/" component={LoginPage} exact/>
               <Route path="/login-page" component={LoginPage} exact/>
-              <Route path="/projectBoard" component={ProjectBoard} exact/>
+              <Route path="/projectBoard/:name" component={ProjectBoard} exact/>
               <Route path="/workspaces" component={Workspaces} exact/>
               <Route path="/register" component={Register} exact/>
               <Route path="/InviteForm" component={InviteForm} exact/>

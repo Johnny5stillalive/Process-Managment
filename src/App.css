@@ -69,3 +69,13 @@ nav a:hover {
   background: black;
   color: white;
 }
+
+.article-list-item :hover {
+  color: darkgreen;
+}
+
+.article-list-item {
+  text-decoration: none;
+  color: black;
+  padding: 16px 0 0 0;
+}

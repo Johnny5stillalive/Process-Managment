@@ -32,9 +32,14 @@ const Button = styled.button`
     `;
 
 
-const ProjectBoard = () => {
+const ProjectBoard = ({match}) => {
+
+  const name = match.params.name;
+
+  const workspace = dataset.find(workspace => workspace.name === name);
+  console.log(workspace)
   
-  const [data, setData] = useState(dataset)
+  const [data, setData] = useState(workspace.data)
   const [isOpen, setIsOpen] = useState(false);
 
   const onDragEnd = result => {
