@@ -6,6 +6,7 @@ import Column from './Column'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 import NavBar from './NavBar'
 import Popup from './Popup';
+import InviteForm from './InviteForrm'
 
 const Container = styled.div`
     display : flex;
@@ -41,6 +42,7 @@ const ProjectBoard = ({match}) => {
   
   const [data, setData] = useState(workspace.data)
   const [isOpen, setIsOpen] = useState(false);
+  const [inviteFormisOpen, inviteFormsetIsOpen] = useState(false);
 
   const onDragEnd = result => {
 
@@ -119,6 +121,11 @@ const ProjectBoard = ({match}) => {
     setIsOpen(!isOpen);
    console.log("You have added a Column")
   }
+
+  const inviteUser = () => {
+    inviteFormsetIsOpen(!inviteFormisOpen);
+   console.log("You have added a user")
+  }
   
   return (
     <>
@@ -126,9 +133,12 @@ const ProjectBoard = ({match}) => {
     {isOpen && <Popup 
       handleClose={addColumn}
     />}
+    {inviteFormisOpen && <InviteForm 
+      handleClose={inviteUser}
+    />}
     <h2>{name}</h2>
     <Button onClick={addColumn}>Add Column</Button>
-    <Button onClick={addColumn}>Invite User</Button>
+    <Button onClick={inviteUser}>Invite User</Button>
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable droppableId='all-columns' direction='horizontal' type='column'>
         {(provided) => (

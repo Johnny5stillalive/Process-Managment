@@ -19,13 +19,9 @@ const InviteForm = (props) => (
           <div className="box">
             <span className="close-icon" onClick={props.handleClose}>x</span>
                     <Container >   
-                        <label>Title : </label>   
+                        <label>UserName : </label>   
                         <input type="text" placeholder="Enter Title" name="Title" required />  
                    </Container>
-                    <Container>
-                        <label>Content : </label>   
-                        <input type="text" placeholder="" name="content" required />  
-                    </Container>
                     <Container>
                         <button type="submit" onClick={props.handleClose}>Create</button> 
                     </Container>
