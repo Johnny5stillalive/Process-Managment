@@ -126,7 +126,7 @@ const ProjectBoard = ({match}) => {
     {isOpen && <Popup 
       handleClose={addColumn}
     />}
-    <h3>{name}</h3>
+    <h2>{name}</h2>
     <Button onClick={addColumn}>Add Column</Button>
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable droppableId='all-columns' direction='horizontal' type='column'>
