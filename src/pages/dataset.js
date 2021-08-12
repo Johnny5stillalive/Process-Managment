@@ -2,7 +2,7 @@ const dataset =
 [
     
     {
-      name:"workspace1",
+      name:"Project Board 1",
       data:{
 
         tasks: {
@@ -27,7 +27,7 @@ const dataset =
 
   
   {
-    name: "workspace2",
+    name: "Project Board 2",
     data:{
       tasks: {
         "task-1": { id: "task-1",  title: "Task 1", content: "Content for task 1: This could get very long but may be this should be a preview!" },

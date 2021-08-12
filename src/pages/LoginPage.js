@@ -9,7 +9,8 @@ const Container = styled.div`
 
 const LoginPage = () => (
         <>  
-        <h1>Login</h1> 
+        <h1>Espalier</h1> 
+        <h3>Login</h3>
         <noscript className="comment">wrapping this block in a form causes it not to redirect but with out it wrapped we are not sending the form info</noscript>
          <form />  
              <Container >   
@@ -20,9 +21,9 @@ const LoginPage = () => (
                     <label>Password : </label>   
                     <input type="password" placeholder="Enter Password" name="password" required />  
                 <Container>
-                    <button type="submit" >Login</button> 
-                    <a href="/workspaces"><input type="submit" value="fastLogin"></input></a>  
-                    <a href="/register"><input type="submit" value="register"></input></a>   
+                     
+                    <a href="/workspaces"><input type="submit" value="Login"></input></a>  
+                    <a href="/register"><input type="submit" value="Register"></input></a>   
                 </Container>   
             </Container>
                

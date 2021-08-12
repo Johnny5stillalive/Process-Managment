@@ -13,7 +13,7 @@ const NavBar = () => (
     <nav>
         <ul id="navMenu">
             <li>
-               <Link to="/Workspaces"> Workspaces </Link>
+               <Link to="/Workspaces"> Projects </Link>
             </li>
             <li>
                <Link to="/InviteForm"> Invite </Link>

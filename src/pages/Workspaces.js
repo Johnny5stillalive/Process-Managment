@@ -6,7 +6,7 @@ import dataset from './dataset.js'
 const Workspaces = () => (
     <>
     <NavBar />
-    <h1>Your available workspaces</h1>
+    <h1>Your Projects:</h1>
     {
         dataset.map((workspace, key) => (
             <Link className="article-list-item" key={key} to={`/projectBoard/${workspace.name}`}>
