@@ -1,12 +1,36 @@
 import React from 'react'
 import NavBar from './NavBar'
+import styled from "styled-components";
 
-const InviteForm = () => (
+const Container = styled.div`
+    margin: 8px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    width:220px;
+    display:flex;
+    flex-direction: column;
+    background-color:white;
+`;
 
-    <>
-        <NavBar />
-        <h1>This will be an invite form</h1>
-    </>
+const InviteForm = (props) => (
+
+   
+        <div className="popup-box">
+          <div className="box">
+            <span className="close-icon" onClick={props.handleClose}>x</span>
+                    <Container >   
+                        <label>Title : </label>   
+                        <input type="text" placeholder="Enter Title" name="Title" required />  
+                   </Container>
+                    <Container>
+                        <label>Content : </label>   
+                        <input type="text" placeholder="" name="content" required />  
+                    </Container>
+                    <Container>
+                        <button type="submit" onClick={props.handleClose}>Create</button> 
+                    </Container>
+          </div>
+        </div>
 )
 
 export default InviteForm

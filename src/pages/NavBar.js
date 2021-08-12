@@ -16,9 +16,6 @@ const NavBar = () => (
                <Link to="/Workspaces"> Projects </Link>
             </li>
             <li>
-               <Link to="/InviteForm"> Invite </Link>
-            </li>
-            <li>
                 <Link to="/login-page">logout</Link>
             </li>
         </ul>

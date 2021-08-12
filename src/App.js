@@ -25,7 +25,7 @@ class App extends Component{
               <Route path="/projectBoard/:name" component={ProjectBoard} exact/>
               <Route path="/workspaces" component={Workspaces} exact/>
               <Route path="/register" component={Register} exact/>
-              <Route path="/InviteForm" component={InviteForm} exact/>
+              
               <Route component={NotFoundPage} />
             </Switch>
           </div>

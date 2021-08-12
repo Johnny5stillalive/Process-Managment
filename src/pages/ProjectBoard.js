@@ -128,6 +128,7 @@ const ProjectBoard = ({match}) => {
     />}
     <h2>{name}</h2>
     <Button onClick={addColumn}>Add Column</Button>
+    <Button onClick={addColumn}>Invite User</Button>
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable droppableId='all-columns' direction='horizontal' type='column'>
         {(provided) => (
