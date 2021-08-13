@@ -7,6 +7,7 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 import NavBar from './NavBar'
 import Popup from './Popup';
 import InviteForm from './InviteForrm'
+import AddColumnForm from './AddColumnForm'
 
 const Container = styled.div`
     display : flex;
@@ -130,7 +131,7 @@ const ProjectBoard = ({match}) => {
   return (
     <>
     <NavBar />
-    {isOpen && <Popup 
+    {isOpen && <AddColumnForm 
       handleClose={addColumn}
     />}
     {inviteFormisOpen && <InviteForm 

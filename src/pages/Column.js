@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Task from './Task.js'
 import { Droppable, Draggable } from 'react-beautiful-dnd'
 import Popup from './Popup';
+import AddTaskForm from './AddTaskForm'
 
 
 const Container = styled.div`
@@ -82,7 +83,7 @@ function Column(props) {
                     ref={provided.innerRef}
                     {...provided.draggableProps}>
                     <div>
-                    {isOpen && <Popup 
+                    {isOpen && <AddTaskForm 
                     handleClose={addTask}
                      />}
                      

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 const Container = styled.div`
     color:black;
     margin: 5px; 
@@ -9,10 +10,8 @@ const Container = styled.div`
 
 const LoginPage = () => (
         <>  
-        <h1>Espalier</h1> 
-        <h3>Login</h3>
-        <noscript className="comment">wrapping this block in a form causes it not to redirect but with out it wrapped we are not sending the form info</noscript>
-         <form />  
+            <img src='/Espailer.png' className="App-logo" alt="logo" />
+            <h1>Espalier</h1> 
              <Container >   
                     <label>Username : </label>   
                     <input type="text" placeholder="Enter Username" name="username" required />  

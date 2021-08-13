@@ -5,13 +5,13 @@ const Container = styled.div`
     margin: 8px;
     border: 1px solid lightgrey;
     border-radius: 2px;
-    width:220px;
+    width:25%;
     display:flex;
     flex-direction: column;
     background-color:white;
 `;
 
-const Popup = (props) => {
+const AddColumnForm = (props) => {
   return (
     <div className="popup-box">
       <div className="box">
@@ -21,10 +21,6 @@ const Popup = (props) => {
                     <input type="text" placeholder="Enter Title" name="Title" required />  
                </Container>
                 <Container>
-                    <label>Content : </label>   
-                    <input type="text" placeholder="" name="content" required />  
-                </Container>
-                <Container>
                     <button type="submit" onClick={props.handleClose}>Create</button> 
                 </Container>
       </div>
@@ -32,4 +28,4 @@ const Popup = (props) => {
   );
 };
 
-export default Popup;
+export default AddColumnForm;
