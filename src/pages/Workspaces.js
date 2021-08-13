@@ -13,11 +13,8 @@ const Workspaces = () => (
                 <h3>{workspace.name}</h3>
             </Link>
         ))
-
-    }
-    
+    }   
     </>
-
 )
 
 export default Workspaces;

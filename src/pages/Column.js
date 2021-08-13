@@ -3,7 +3,6 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import Task from './Task.js'
 import { Droppable, Draggable } from 'react-beautiful-dnd'
-import Popup from './Popup';
 import AddTaskForm from './AddTaskForm'
 
 

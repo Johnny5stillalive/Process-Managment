@@ -25,7 +25,6 @@ class App extends Component{
               <Route path="/projectBoard/:name" component={ProjectBoard} exact/>
               <Route path="/workspaces" component={Workspaces} exact/>
               <Route path="/register" component={Register} exact/>
-              
               <Route component={NotFoundPage} />
             </Switch>
           </div>

@@ -5,7 +5,6 @@ import dataset from './dataset'
 import Column from './Column'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 import NavBar from './NavBar'
-import Popup from './Popup';
 import InviteForm from './InviteForrm'
 import AddColumnForm from './AddColumnForm'
 
