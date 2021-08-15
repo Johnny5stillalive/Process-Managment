@@ -82,6 +82,7 @@ function Column(props) {
                     ref={provided.innerRef}
                     {...provided.draggableProps}>
                     <div>
+                        
                     {isOpen && <AddTaskForm 
                     handleClose={addTask}
                      />}
